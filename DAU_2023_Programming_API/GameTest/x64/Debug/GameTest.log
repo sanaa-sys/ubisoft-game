@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  app.cpp
+  main.cpp
+  SimpleController.cpp
+  SimpleSound.cpp
+  SimpleSprite.cpp
+  GameTest.cpp
+  stb_image.cpp
+  Generating Code...
+  GameTest.vcxproj -> D:\dau\DAU_2023_Programming_API\x64\Debug\GameTest.exe
+  D:\dau\DAU_2023_Programming_API\\GameTest\glut\bin\x64\freeglut.dll
+  1 File(s) copied
