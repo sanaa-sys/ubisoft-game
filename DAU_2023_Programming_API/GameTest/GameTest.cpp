@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "app/app.h"
+#include "App/app.h"
 #include "Star.h"
 #include <vector>
 
@@ -22,7 +22,8 @@ void Update(float deltaTime) {
     }
 
     // Handle input
-    if (App::GetController().CheckButton(XINPUT_GAMEPAD_A, true)) {
+    if (App::IsKeyPressed('A')
+        )  //check support for keyboard
         // Cycle selected star's state
         if (!stars.empty()) {
             Star* selected = stars[0]; // For simplicity, always select first star
@@ -30,7 +31,7 @@ void Update(float deltaTime) {
             selected->SetState(StarState((currentState + 1) % 4));
         }
     }
-}
+
 
 void Render() {
     // Draw all stars
