@@ -8,6 +8,7 @@ enum StarState {
     REBIRTH
 };
 
+
 class Star {
 public:
     Star(float x, float y, StarState initialState); // Constructor with three arguments
