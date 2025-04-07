@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <math.h>
 #include "app/app.h"
-#include "Star.h"
+#include "app/Star.h"
 #include <vector>
 
 std::vector<Star*> stars;

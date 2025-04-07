@@ -1,13 +1,14 @@
 #include "stdafx.h"
 #include "Star.h"
 #include "app/app.h"
+#include <math.h>
 
 const float Star::STATE_DURATION = 5.0f;
 const float Star::BIRTH_SCALE_RATE = 0.2f;
 const float Star::DEATH_SCALE_RATE = 0.3f;
 
-Star::Star(float x, float y) :
-    m_currentState(BIRTH),
+Star::Star(float x, float y, StarState initialState) :
+    m_currentState(initialState),
     m_stateTimer(0.0f),
     m_scale(0.1f),
     m_brightness(0.2f)
@@ -24,7 +25,7 @@ Star::Star(float x, float y) :
     m_sprite->CreateAnimation(DEATH, speed, { 2 });
     m_sprite->CreateAnimation(REBIRTH, speed, { 3 });
 
-    m_sprite->SetAnimation(BIRTH);
+    m_sprite->SetAnimation(initialState);
 }
 
 Star::~Star() {

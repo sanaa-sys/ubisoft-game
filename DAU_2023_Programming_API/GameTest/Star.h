@@ -8,9 +8,10 @@ enum StarState {
     REBIRTH
 };
 
+
 class Star {
 public:
-    Star(float x, float y);
+    Star(float x, float y, StarState initialState); // Constructor with three arguments
     ~Star();
 
     void Update(float deltaTime);
