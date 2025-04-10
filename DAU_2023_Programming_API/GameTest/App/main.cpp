@@ -126,7 +126,7 @@ void Idle()
 	static double prevTime = GetCounter();
 	double tick = GetCounter() - prevTime;
 	double currentTime = GetCounter();
-	double deltaTime = currentTime - gLastTime;
+	double deltaTime = (currentTime - gLastTime)/1000; 
 	// Update.
 	if (deltaTime > (UPDATE_MAX))
 	{	
