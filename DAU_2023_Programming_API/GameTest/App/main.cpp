@@ -126,7 +126,7 @@ void Idle()
 	static double prevTime = GetCounter();
 	double tick = GetCounter() - prevTime;
 	double currentTime = GetCounter();
-	double deltaTime = (currentTime - gLastTime)/1000; 
+	double deltaTime = (currentTime - gLastTime); 
 	// Update.
 	if (deltaTime > (UPDATE_MAX))
 	{	
@@ -135,7 +135,7 @@ void Idle()
 		CSimpleControllers::GetInstance().Update();
 
 		gUserUpdateProfiler.Start();
-		Update((float)deltaTime);				// Call user defined update.
+		Update((float)(deltaTime/1000));				// Call user defined update.
 		gUserUpdateProfiler.Stop();
 		
 		gLastTime = currentTime;		
