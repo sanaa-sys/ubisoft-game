@@ -14,7 +14,7 @@ Star::Star(float x, float y, StarState initialState) :
     m_brightness(0.2f)
 {
     // Assuming we have a star sprite sheet with 4 animations for each state
-    m_sprite = App::CreateSprite(".\\TestData\\star.bmp", 4, 1);
+    m_sprite = App::CreateSprite(".\\TestData\\Test.bmp", 4, 4);
     m_sprite->SetPosition(x, y);
     m_sprite->SetScale(m_scale);
 
