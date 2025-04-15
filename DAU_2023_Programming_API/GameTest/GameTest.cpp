@@ -37,8 +37,8 @@ void Update(float deltaTime) {
 
         // Convert from normalized coordinates to virtual coordinates
 #if APP_USE_VIRTUAL_RES
-        mouseX =  (mouseX + 1.0f) *  2.0f;
-        mouseY =  (mouseY + 1.0f) *  2.0f;
+        mouseX =  (mouseX + 1.0f);
+        mouseY =  (mouseY + 1.0f);
 #endif
 
         // Create a new star at mouse position
