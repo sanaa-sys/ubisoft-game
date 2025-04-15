@@ -35,12 +35,6 @@ void Update(float deltaTime) {
         float mouseX, mouseY;
         App::GetMousePos(mouseX, mouseY);
 
-        // Convert from normalized coordinates to virtual coordinates
-#if APP_USE_VIRTUAL_RES
-        mouseX =  (mouseX + 1.0f);
-        mouseY =  (mouseY + 1.0f);
-#endif
-
         // Create a new star at mouse position
         CreateStar(mouseX, mouseY);
     }
